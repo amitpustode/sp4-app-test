@@ -17,8 +17,8 @@ spec:
       paths:
       - backend:
           service:
-            name: sp4-app-test        # Mention service's `metadata.name:` value over here
+            name: sp4-app-test       
             port:
-              number: 80               # Mention service's `spec.ports[].port:` value over here
-        path: /sp4-app-test/hello                  # Mention same name as that of deployment name and application needs to handle this context path to fulfill the requests
+              number: 80              
+        path: /sp4-app-test
         pathType: Prefix
