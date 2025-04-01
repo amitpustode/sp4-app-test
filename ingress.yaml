@@ -20,5 +20,5 @@ spec:
             name: sp4-app-test       
             port:
               number: 80              
-        path: /hello
+        path: /
         pathType: Prefix
