@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: sp4-app-test
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: sp4-app-test
   ports:
     - protocol: TCP
       port: 80
       targetPort: 8080  # Map Kubernetes service to container's port 9090
-      nodePort: 30008  # Exposed port (choose between 30000-32767)
+      #nodePort: 30008  # Exposed port (choose between 30000-32767)
