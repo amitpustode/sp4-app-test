@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sp4-app-test
-  annotations:
-    argocd.argoproj.io/hook: Sync  # Hook to force Argo CD to syn.
-    rollme: "{{ randAlphaNum 5 }}"  # Forces pod recreation on sync
+  #annotations:
+    #argocd.argoproj.io/hook: Sync  # Hook to force Argo CD to syn.
+    #rollme: "{{ randAlphaNum 5 }}"  # Forces pod recreation on sync
 spec:
   replicas: 2
   selector:
@@ -14,8 +14,8 @@ spec:
     metadata:
       labels:
         app: sp4-app-test
-      annotations:
-        rollme: "{{ now | unixEpoch }}"  # Forces pod recreation when Argo CD syncs 
+      #annotations:
+        #rollme: "{{ now | unixEpoch }}"  # Forces pod recreation when Argo CD syncs 
     spec:
       imagePullSecrets:
         - name: harbor-eks-cred 
