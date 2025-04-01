@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: sp4-app-test
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: sp4-app-test
   ports:
