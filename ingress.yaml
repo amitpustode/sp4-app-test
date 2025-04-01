@@ -20,5 +20,5 @@ spec:
             name: sp4-app-test        # Mention service's `metadata.name:` value over here
             port:
               number: 80               # Mention service's `spec.ports[].port:` value over here
-        path: /hello                   # Mention same name as that of deployment name and application needs to handle this context path to fulfill the requests
+        path: /sp4-app-test                  # Mention same name as that of deployment name and application needs to handle this context path to fulfill the requests
         pathType: Prefix
